@@ -1,4 +1,7 @@
+import { TechBadge } from '@/app/components/header/tech-badge'
+import { Link } from '@/app/components/link'
 import Image from 'next/image'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 
 export const ProjectCard = () => {
   return (
@@ -9,7 +12,7 @@ export const ProjectCard = () => {
           height={304}
           src="/images/profile-pic3.png"
           alt="Thumbnail do projeto X"
-          className="object-cover rounded-lg"
+          className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"
         />
       </div>
 
@@ -31,6 +34,19 @@ export const ProjectCard = () => {
           iusto eum ut numquam perspiciatis suscipit velit dolor, repudiandae
           sequi voluptatem debitis.
         </p>
+
+        <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
+          <TechBadge name="Next.js" />
+          <TechBadge name="Next.js" />
+          <TechBadge name="Next.js" />
+          <TechBadge name="Next.js" />
+          <TechBadge name="Next.js" />
+        </div>
+
+        <Link href={''}>
+          Ver projeto
+          <HiArrowNarrowRight />
+        </Link>
       </div>
     </div>
   )
