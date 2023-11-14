@@ -1,3 +1,4 @@
+import { HighlightedProjects } from './components/header/pages/home/highlighted-projects'
 import { KnownTechs } from './components/header/pages/home/known-techs'
 import { ProfileSection } from './components/header/pages/home/profile-section/index'
 
@@ -6,6 +7,7 @@ export default async function Home() {
     <>
       <ProfileSection />
       <KnownTechs />
+      <HighlightedProjects />
     </>
   )
 }
