@@ -19,7 +19,7 @@ export const HighlightedProjects = () => {
         <p className="flex items-center gap-1.5">
           <span className="text-gray-400">Se interessou?</span>
           <Link href="/projects" className="inline-flex">
-            Ver todos
+            Ver todos (verificar se esta tudo certo)
             <HiArrowNarrowRight />
           </Link>
         </p>
