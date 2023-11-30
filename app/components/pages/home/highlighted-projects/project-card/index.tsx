@@ -1,4 +1,4 @@
-import { TechBadge } from '@/app/components/header/tech-badge'
+import { TechBadge } from '@/app/components/tech-badge'
 import { Link } from '@/app/components/link'
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
