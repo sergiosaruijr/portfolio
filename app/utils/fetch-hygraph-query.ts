@@ -11,4 +11,8 @@ export const fetchHygraphQuery = async (query: string) => {
       revalidate: 60 * 60 * 24, // 24 hours
     },
   })
+
+  const { data } = await response.json()
+
+  return data
 }
