@@ -26,6 +26,17 @@ const getPageData = async (): Promise<HomePageData> => {
           iconSvg
           name
         }
+        highlightProjects {
+          slug
+          thumbnail {
+            url
+          }
+          title
+          shortDescription
+          technologies {
+            name
+          }
+        }
       }
     }
   `
@@ -40,7 +51,7 @@ export default async function Home() {
     <>
       <ProfileSection homeInfo={pageData} />
       <KnownTechs techs={pageData.knownTechs} />
-      <HighlightedProjects />
+      <HighlightedProjects projects={pageData.hightlightProjects} />
       <WorkExperience />
     </>
   )
