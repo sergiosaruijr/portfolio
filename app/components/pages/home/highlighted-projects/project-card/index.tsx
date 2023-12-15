@@ -36,14 +36,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
           {project.technologies.map((tech) => {
-            ;<TechBadge
-              key={`${project.title}-tech-${tech.name}`}
-              name={tech.name}
-            />
+            ;<TechBadge key={`${project.title}-tech-${tech.name}`} name={tech.name} />
           })}
         </div>
 
-        <Link href={''}>
+        <Link href={`${project.slug}`}>
           Ver projeto
           <HiArrowNarrowRight />
         </Link>
