@@ -16,12 +16,12 @@ export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
       <HozirontalDivider className="mb-16" />
 
       <div>
-        {projects?.map((project) => {
-          ;<div key={project.slug}>
-            <ProjectCard projects={project} />
+        {projects?.map((project) => (
+          <div key={project.slug}>
+            <ProjectCard project={project} />
             <HozirontalDivider className="my-16" />
           </div>
-        })}
+        ))}
 
         <p className="flex items-center gap-1.5">
           <span className="text-gray-400">Se interessou?</span>
