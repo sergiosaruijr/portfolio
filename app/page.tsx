@@ -26,23 +26,27 @@ const getPageData = async (): Promise<HomePageData> => {
           iconSvg
           name
         }
-        highlightProjects {
-          slug
-          thumbnail {
-            url
-          }
-          title
-          shortDescription
-          technologies {
-            name
-          }
-        }
+      
       }
     }
   `
 
   return fetchHygraphQuery(query)
 }
+
+// Descobrir pq esta dando erro
+
+// highlightProjects {
+//   slug
+//   thumbnail {
+//     url
+//   }
+//   title
+//   shortDescription
+//   technologies {
+//     name
+//   }
+// }
 
 export default async function Home() {
   const { page: pageData } = await getPageData()
@@ -51,7 +55,7 @@ export default async function Home() {
     <>
       <ProfileSection homeInfo={pageData} />
       <KnownTechs techs={pageData.knownTechs} />
-      <HighlightedProjects projects={pageData.hightlightProjects} />
+      <HighlightedProjects projects={pageData.highlightProjects} />
       <WorkExperience />
     </>
   )

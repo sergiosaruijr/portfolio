@@ -16,13 +16,13 @@ export type HomePageInfo = {
   }
   socials: Social[]
   knownTechs: KnownTech[]
-  hightlightProjects: Project[]
+  highlightProjects: Project[]
 }
 
 export type HomePageData = {
-  profilePicture: any
-  socials: any
-  technologies: any
-  introduction: any
+  // profilePicture: any
+  // socials: any
+  // technologies: any
+  // introduction: any
   page: HomePageInfo
 }
