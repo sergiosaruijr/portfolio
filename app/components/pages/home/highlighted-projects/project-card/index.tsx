@@ -27,7 +27,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             width={20}
             height={20}
             src="/images/icons/project-title-icon.svg"
-            alt=""
+            alt={`Imagem do projeto ${project.title}`}
           />
           {project.title}
         </h3>
@@ -35,12 +35,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <p className="text-gray-400 my-6">{project.shortDescription}</p>
 
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
-          {project.technologies.map((tech) => (
-            <TechBadge key={`${project.title}-tech-${tech}`} name={tech.name} />
+          {project.technologies?.map((tech) => (
+            <TechBadge key={`${project.title}-${tech.name}`} name={tech.name} />
+            // <TechBadge key={`${project.title}-tech-${tech}`} name={tech.name} />
           ))}
         </div>
 
-        <Link href={`${project.slug}`}>
+        <Link href={`/projects/${project.slug}`}>
           Ver projeto
           <HiArrowNarrowRight />
         </Link>

@@ -6,6 +6,11 @@ export type KnownTech = {
   // ): import('react').ReactNode
   iconSvg: string
   name: string
+  startDate: string
+}
+
+export type Technology = {
+  name: string
 }
 
 export type ProjectSection = {
@@ -22,13 +27,14 @@ export type Project = {
   }
   title: string
   shortDescription: string
-  technologies: KnownTech[]
+  technologies: Technology[]
   pageThumbnail: {
     url: string
   }
   sections: ProjectSection[]
   description: {
     raw: RichTextContent
+    text?: string
   }
   liveProjectUrl?: string
   githubUrl?: string

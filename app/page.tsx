@@ -5,6 +5,10 @@ import { WorkExperience } from './components/pages/home/work-experience'
 import { HomePageData } from './types/page-info'
 import { fetchHygraphQuery } from './utils/fetch-hygraph-query'
 
+export const metadata = {
+  title: 'Home',
+}
+
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
     query PageInfoQuery {
@@ -25,13 +29,16 @@ const getPageData = async (): Promise<HomePageData> => {
         knownTechs {
           iconSvg
           name
+          startDate
         }
-      
       }
     }
   `
 
-  return fetchHygraphQuery(query)
+  return fetchHygraphQuery(
+    query,
+    1000 * 60 * 60 * 24, // 1 day
+  )
 }
 
 // Descobrir pq esta dando erro
